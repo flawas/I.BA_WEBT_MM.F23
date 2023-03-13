@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Beispiel: Fliessende Positionierung</title>
+    <link href="webt.css" rel="stylesheet">
+    <style>
+        .parent {
+            background-color: rgb(165, 165, 165);
+            width: 400px; height: 400px;
+        }
+        .child {
+            background-color: rgb(68, 114, 196);
+            width: 100px; height: 100px;
+            border: solid 2px;
+            font-size: 2em;
+            text-align: center;
+
+            margin: 5px;
+			float:left;   
+            /* float:right;    */
+			clear:left;
+            /* clear:right; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Beispiel: Fliessende Positionierung</h1>
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+        abc
+    </div>
+</body>
+
+</html>
