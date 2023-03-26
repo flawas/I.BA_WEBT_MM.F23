@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Übung 1: Auf Fehlersuche mit Firefox</title>
+    <meta charset="utf8">
+</head>
+
+<body>
+    <p>Die Ausgabe erfolgt im Console-Log: F12</p>
+    <script>
+    function ggt(a, b) {
+        while (b != 0) {
+            let t = b;
+            b = a % b;
+            a = t;
+        }
+        return a;
+    }
+    let result = ggt(36,8);
+    console.log(result);
+    </script>
+</body>
+    
+</html>

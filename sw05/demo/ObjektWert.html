@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Objekt Demo (Wert)</title>
+    <meta charset="utf8">
+    <link href="webt.css" rel="stylesheet">
+</head>
+<body>
+    <p>Ausgabe in Konsole (F12)</p>
+    <script>
+        let obj = { 
+            wert : 100,
+            duplicate : function() {
+                this.wert = 2 * this.wert;
+            }            
+        };
+        console.log('(vorher) wert: ' + obj.wert);
+        obj.duplicate();
+        console.log('(nachher) wert: ' + obj.wert);
+    </script>
+</body>
+
+</html>

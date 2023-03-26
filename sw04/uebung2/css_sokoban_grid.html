@@ -11,6 +11,8 @@
         height:    600px;
         
         /* TODO: hier (falls nötig) CSS-Eigenschaften setzen (Eltern-Element) */
+        display: grid;
+        grid-template-columns: 14% 29% 14% 29% 20%;
       }
       .child {
         background:rgb(68,114,196);
@@ -22,12 +24,16 @@
       }
       #c1 {
         /* TODO: hier (falls nötig) CSS-Eigenschaften setzen (linkes Kind) */
-
+        grid-column: 2/5;
+        margin-top: 200px;
+        margin-left: 2px;
         
       }
       #c2 {
         /* TODO: hier (falls nötig) CSS-Eigenschaften setzen (rechtes Kind) */
-
+        grid-column: 4/4;
+        margin-top: -300px;
+        margin-left: 1px;
         
       }
     </style>
