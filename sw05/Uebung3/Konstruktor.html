@@ -10,18 +10,16 @@
     <script>
         function constructBook(title, author, price) {
            // TODO: Funktion fertigstellen
-           return{
-                title:title,
-                author:author,
-                price:price,
-                print: function(){
-                    return title + ' von ' + author + '; Preis: ' + price;
-                }
+           let book = {
+            title : title,
+            author: author,
+            price:price,
+            print : function(){
+                return title + ' von ' + author + '; Preis: ' + price;
             }
+           }
+           return book;
         }
-
-        
-
 
         let books = [
             constructBook('JavaScript: Das umfassende Handbuch', 'Philip Ackermann', 49.90),
