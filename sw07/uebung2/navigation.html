@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Übung 2: Responsive Navigationsleiste</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+  <nav class="w3-bar w3-blue">
+    <a href="https://www.hslu.ch" class="w3-bar-item w3-button w3-hide-small">HSLU</a>
+    <a href="https://elearning.hslu.ch/ilias" class="w3-bar-item w3-button w3-hide-small">ILIAS</a>
+    <a href="https://mycampus.hslu.ch" class="w3-bar-item w3-button w3-hide-small">MyCampus</a>
+    <button class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="document.getElementById('sub').classList.toggle('w3-hide');">&#8801;</button>
+    <div id="sub" class="w3-bar-block w3-blue w3-hide">
+      <a href="https://www.hslu.ch" class="w3-bar-item w3-button">HSLU</a>
+    <a href="https://elearning.hslu.ch/ilias" class="w3-bar-item w3-button">ILIAS</a>
+    <a href="https://mycampus.hslu.ch" class="w3-bar-item w3-button">MyCampus</a>
+    </div>
+  </nav>
+
+</body>
+
+</html>

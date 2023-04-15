@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Übung 2: Events</title>
+    <meta charset="utf8">
+</head>
+<body>
+    <h1>Events Übung</h1>
+    
+    <p>Bitte geben Sie Ihre Mitteilung ein:</p>
+    <form>
+        <label for="name">Name:</label>
+        <input name="name" id="name" type="text">
+        <label for="mitteilung">Mitteilung:</label>
+        
+        <input name="mitteilung" type="text">
+        <button type="submit" onclick="onClick()">Abschicken</button>
+    </form>
+    <p id="output"></p>
+    <script>
+    document.getElementById("name").addEventListener("change", myFunction);
+    function labelFunction(){
+        
+    }
+
+    function onClick() {
+            var mitteilung = document.getElementById("mitteilung");
+            output.innerHTML = 'test';
+            console.log(message.value);
+    }
+
+    function myFunction() {
+        var x = document.getElementById("name");
+        x.value = x.value.toUpperCase();
+    }
+    
+    </script>
+</body>
+
+</html>

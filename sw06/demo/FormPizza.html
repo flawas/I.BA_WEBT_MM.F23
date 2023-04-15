@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8" />
+    <title>Beispiel: Reaktives Formular zur Pizzabestellung</title>
+    <link href="webt.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Beispiel: Reaktives Formular zur Pizzabestellung</h1>
+    <form method="post" action="https://www.w3schools.com/action_page.php" onsubmit="return validierung();">
+        <label for="mail">Email-Adresse:</label><input name="mail" size="32" />
+        <table>
+            <tr>
+                <th>Anzahl</th>
+                <th>Pizza</th>
+                <th>Preis</th>
+                <th>Total</th>
+            </tr>
+
+            <tr>
+                <td>
+                    <input name="anzahl1" size="3" value="0" oninput="changed(1);" />
+                </td>
+                <td>Margherita</td>
+                <td id="preis1">7.50</td>
+                <td id="total1">0.00</td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="anzahl2" size="3" value="0" oninput="changed(2);" />
+                </td>
+                <td>Tonno</td>
+                <td id="preis2">9.50</td>
+                <td id="total2">0.00</td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="anzahl3" size="3" value="0" oninput="changed(3);" />
+                </td>
+                <td>Fantasia</td>
+                <td id="preis3">11.00</td>
+                <td id="total3">0.00</td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <th>Total</th>
+                <td></td>
+                <td id="gesamt">0.00</td>
+            </tr>
+        </table>
+        <script>
+            MAX = 3;
+            function changed(id) {
+                // Überprüfe Anzahl
+                let anzahlFeld = document.querySelector(
+                    'input[name=anzahl' + id + ']'
+                );
+                let anzahl = parseInt(anzahlFeld.value);
+                if (anzahl < 0) {
+                    anzahlFeld.value = 0;
+                    anzahl = 0;
+                }
+
+                // Total pro Pizza
+                let preisFeld = document.getElementById('preis' + id); // 1.
+                let preis = anzahl * parseFloat(preisFeld.innerHTML); // 2.
+                let totalFeld = document.getElementById('total' + id); // 3.
+                totalFeld.innerHTML = preis.toFixed(2); // 4.
+
+                // Gesamttotal
+                let gesamt = 0;
+                for (let i = 1; i <= MAX; ++i) {
+                    gesamt += parseFloat(
+                        document.getElementById('total' + i).innerHTML
+                    );
+                }
+                document.getElementById('gesamt').innerHTML = gesamt.toFixed(2);
+            }
+
+            function validierung() {
+                // Überprüfe Emailadresse
+                if (document.querySelector('input[name=mail]').value == '') {
+                    alert('Bitte geben Sie Ihre email-Adresse ein !');
+                    return false;
+                }
+                // Bestimme Anzahl Pizzas
+                let pizzas = 0;
+                for (let i = 1; i <= MAX; ++i) {
+                    pizzas += parseFloat(
+                        document.querySelector('input[name=anzahl' + i + ']').value
+                    );
+                }
+                // Hinweis: Keine Pizza bestellt
+                if (pizzas < 1) {
+                    alert('Sie haben nichts bestellt!');
+                    return false;
+                }
+                return true;
+            }
+        </script>
+        <button type="submit">Bestellen</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kontinuierliche Positionsbestimmung</title>
+    <meta charset="utf8">
+    <link href="webt.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Beispiel: Kontinuierliche Positionsbestimmung</h1>
+    <p id="output"></p>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+
+    <script>
+        let globalCounter = 0;
+        let watchId;
+
+        function start() {
+            watchId = navigator.geolocation.watchPosition(showPosition);
+        }
+        function stop() {
+            navigator.geolocation.clearWatch(watchId);
+        }
+
+        function showPosition(position) {
+            globalCounter++;
+            let output = document.getElementById('output');
+            output.innerHTML = 'Count: ' + globalCounter
+                + ' / Breite: ' + position.coords.latitude
+                + ' / Länge: ' + position.coords.longitude;
+        }
+    </script>
+</body>
+
+</html>

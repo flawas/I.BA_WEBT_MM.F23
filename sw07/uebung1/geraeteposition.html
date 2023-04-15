@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Übung 1: Geräteposition</title>
+    <meta charset="utf8">
+</head>
+
+<body>
+    <h2>Die aktuelle Geräteposition</h2>
+    <p>Breite: <span id="latitude"></span></p>
+    <p>Länge: <span id="longitude"></span></p>
+    <p>
+        <a id="maps" href="https://google.ch/maps" target="_blank">Zeige Position auf Google Maps</a>
+    </p>
+    <button onclick="show()">Abfragen der aktuellen Geräteposition</button>
+    <script>
+        function zeigePosition(position) {
+            // TODO: Zeigen Sie die Position in den entsprechenden Feldern
+            let output = document.getElementById('latitude');
+            output.innerHTML += position.coords.latitude;
+            let output2 = document.getElementById('longitude');
+            output2.innerHTML +=  position.coords.longitude;
+            // TODO: Passen Sie den Link zu Google Maps an
+            let link = "https://www.google.com/maps/search/?api=1&query=" + position.coords.latitude + "," + position.coords.longitude;
+            console.log(link);
+            document.getElementById('maps').setAttribute("href", link);
+        }
+
+        function zeigeFehler(error) {
+            let text;
+            switch (error.code) {
+                case error.PERMISSION_DENIED: text = "Benutzer verweigert Zugriff"; break;
+                case error.TIMEOUT: text = "Wartezeit überschritten"; break;
+                case error.POSITION_UNAVAILABLE: text = "Position nicht verfügbar"; break;
+                default: text = "Unbekannter Fehler aufgetreten";
+            }
+            document.getElementById("latitude").innerHTML = text;
+        }
+
+        function show() {
+            // TODO: Übergeben Sie die Funktionen zeigePosition und zeigeFehler als Parameter
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(zeigePosition, zeigeFehler);
+            } else {
+                let output = document.getElementById('output');
+                output.innerHTML = 'Geolocation-Funktionalität nicht unterstützt';
+            }
+        }
+    </script>
+</body>
+
+</html>

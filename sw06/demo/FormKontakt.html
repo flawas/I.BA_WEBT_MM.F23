@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <title>Beispiel: Kontaktformular</title>
+    <link href="webt.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Beispiel: Kontaktformular</h1>
+    <form action="https://www.w3schools.com/action_page.php" method="post" onsubmit="return isValid();">
+        Text: <input id="name" name="name" />
+        Email:<input id="email" name="email" />
+        <button type=" submit">Senden</button>
+    </form>
+    <script>
+        function isValid() {
+            let vorname = document.getElementById('name');
+            if (vorname.value == '') {
+                alert('bitte Text eingeben'); return false;
+            }
+            let email = document.getElementById('email');
+            if (email.value == '') {
+                alert('bitte Email-Adresse angeben!'); return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>

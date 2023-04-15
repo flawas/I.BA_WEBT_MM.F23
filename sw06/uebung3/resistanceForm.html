@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <title>Übung 3b: Formular für Gesamtwiderstandsberechnung</title>
+    <script>
+		function calculateResistance(r1, r2, wiring) {		
+			// TODO: aus Aufgabe 3a übernehmen
+		}
+
+		function calculate() {
+			// TODO: Holen der Daten aus Formular: r1, r2 und wiring
+
+			// TODO: Aufruf der Funktion calculateResistance mit entspr. Daten des Formulars
+
+			// TODO: Ausgabe des Gesamtwiderstands
+		}
+    </script>
+</head>
+<body>
+
+<h2>Berechnung Gesamtwiderstand</h2>
+	<form name="resistanceForm">
+	
+		<fieldset>
+			<legend><strong>Widerstände</strong></legend>
+		
+			<label for="r1">R1:</label>
+			<br/>
+			<input id="r1" name="r1" type="number" size="10" value=""/>
+			<br/>
+			<label for="r2">R2:</label>
+			<br/>
+			<input id="r2" name="r2" type="number" size="10" value=""/>
+		</fieldset>
+				
+		<fieldset>
+			<legend><strong>Schaltung</strong></legend>
+		
+			<label for="serial">Seriell:</label><br />
+			<input name="wiring" id="serial" type="radio" value="serial"/>
+			<br/>
+			<label for="parallel">Parallel:</label><br />
+			<input name="wiring" id="parallel" type="radio" value="parallel"/>
+		</fieldset>
+		
+		<fieldset>
+			<legend><strong>Berechnen</strong></legend>        
+			<button type="button" name="berechnen" onclick="calculate()">Berechne Gesamtwiderstand</button>
+		</fieldset>	
+	</form>
+</body>
+
+</html>

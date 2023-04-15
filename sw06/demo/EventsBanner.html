@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <title>Beispiel: Animiertes Banner</title>
+    <link href="webt.css" rel="stylesheet">
+    <style>
+        #banner {
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body onload="change()">
+    <h1>Beispiel: Animiertes Banner</h1>
+    <img id="banner">
+
+    <button onclick="stop();">Stop</button>
+    <script>
+        // globals         
+        let images = ['bild1.jpg', 'bild2.jpg', 'bild3.jpg'];
+        let currImage = 0;
+        let timerId = null;
+
+        function change() {
+            let banner = document.getElementById('banner');
+            banner.src = images[currImage++];
+            if (currImage >= images.length) currImage = 0;
+            timerId = setTimeout(change, 3000);
+        }
+
+        function stop() {
+            if (timerId != null) { clearTimeout(timerId); }
+        }
+    </script>
+</body>
+
+</html>
