@@ -12,7 +12,7 @@
     # Password for the FTP host.
     password: j*tDWDkGNk!!FvMepJDh
     # Local directory from which to upload.
-    localDir: # optional, default is /
+    localDir: /
     # FTP Action: None | Copy | DeleteAppOfflineHtm.
     ftpAction: # default is None
     # Ignore certificate errors.
