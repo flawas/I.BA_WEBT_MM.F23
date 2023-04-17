@@ -1,16 +1,8 @@
-name: Deploy via ftp
-on: push
-jobs:
-  deploy:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Upload ftp
-      uses: genietim/ftp-action@releases/v4
-      with:
-        host: ${{ secrets.FTP_SERVER }}
-        user: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        localDir: "dist"
-        remoteDir: "/home/flawasch/flawas.ch"
+- name: ftp-upload-action
+  uses: GenieTim/ftp-action@v4.0.1
+  with:
+    host: ${{ secrets.FTP_SERVER }}
+    user: ${{ secrets.FTP_USERNAME }}
+    password: ${{ secrets.FTP_PASSWORD }}
+    localDir: "dist"
+    remoteDir: "/home/flawasch/flawas.ch"
