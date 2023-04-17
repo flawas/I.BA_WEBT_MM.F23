@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Beispiel: Register for Newsletter (Attribute mit Vue.js)</title>
+    <meta charset="utf8">
+    <link href="webt.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+</head>
+
+<body>
+    <h1>Beispiel: Register for Newsletter (Attribute mit Vue.js)</h1>
+    <form id="app" action="https://www.w3schools.com/action_page.php" method="post">
+        <label for="name">Email-Adresse:</label>
+        <input id="name" v-model="email" type="text" name="name">
+        <button v-bind:disabled="email == ''" type="submit">Send</button>
+    </form>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    email: ''
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+
+</html>
