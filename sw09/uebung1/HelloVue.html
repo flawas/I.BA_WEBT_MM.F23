@@ -12,10 +12,17 @@
         <button v-on:click="message='Hello Vue!'">Show greetings</button>
 
         <!-- TODO: Mittelung "message" im <p> Element darstellen -->
-        <p></p>
+        <p>{{ message }}</p>
     </div>
     <script>        
         // TODO: Verbindung zwischen <div> und Object { message: '' } mittels Vue herstellen
+        Vue.createApp({
+            data() {
+                return {    
+                    message: ""
+                }
+            }
+        }).mount('#app');
     </script>
 </body>
 

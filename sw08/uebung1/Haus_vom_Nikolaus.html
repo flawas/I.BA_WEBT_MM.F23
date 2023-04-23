@@ -7,8 +7,24 @@
     <script>
         function draw() {
             // TODO: Fragen Sie das Canvas-Element und dessen Context ab
+            let canvas = document.getElementById("myCanvas");
+            let c = canvas.getContext('2d');
 
             // TODO: Zeichnen Sie das Haus von Nikolaus
+            c.beginPath();
+            c.lineWidth = 1;
+            c.moveTo(100, 400);
+            c.lineTo(100, 200);
+            c.lineTo(200, 100);
+            c.lineTo(300, 200);
+            c.lineTo(100, 200);
+            c.lineTo(300, 400);
+            c.lineTo(300, 200);
+            c.lineTo(100, 400);
+            c.lineTo(300, 400);
+            c.stroke();
+            c.closePath();
+
         }
     </script>
 </head>

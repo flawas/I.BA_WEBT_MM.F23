@@ -12,10 +12,10 @@
         <label for="name">Bitte Namen eingaben:</label>
 
         <!-- TODO Verbindung mit obj.name -->
-        <input id="name">
+        <input v-model="name" id="name">
 
         <!-- TODO: Ausgabe von Hallo gefolgt von obj.name -->
-        <p id="output"></p>
+        <p id="output">{{ "Hallo " + name}} </p>
 
     </form>
     <script>

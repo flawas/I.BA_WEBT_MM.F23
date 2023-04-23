@@ -27,9 +27,17 @@
             c.beginPath();
             c.arc(185, 120, 15, 0, 2 * Math.PI, false);
             c.fill();
-
+            
             // TODO: Zeichnen des Munds des Smileys
-
+            c.moveTo(150, 175);
+            
+            c.arc(150, 175, 40, 0, Math.PI, false);
+            c.fillStyle="#ffffff";
+            c.srokeStyle= "#000000";
+            c.lineWidth=10;
+            c.closePath();
+            c.fill();
+            c.stroke();
         }
     </script>
 </head>
