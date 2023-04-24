@@ -87,6 +87,7 @@
 
         function update() {
             // TODO: Zeit anpassen (globale Variable time)
+            time += 10;
         }
 
         function animate() {
@@ -94,7 +95,7 @@
             draw();
 
             // TODO: animate nach 10ms wieder aufrufen
-            setTimeout(update(), time());
+            setTimeout(animate, 10);
         }
     </script>
 </head>
