@@ -18,9 +18,9 @@
 
         // TODO: Paragraph mit Zahl ausgeben. Klasse green, falls < 50 sonst Klasse red.
         if($zahl < 50){
-            echo "<p class='green'>'$name'</p>";
+            echo "<p class='green'>$zahl</p>";
         } else if ($zahl > 50){
-            echo "<p class='red'>'$name'</p>";
+            echo "<p class='red'>$zahl</p>";
         } else {
             echo "Calculate Error.";
         }
