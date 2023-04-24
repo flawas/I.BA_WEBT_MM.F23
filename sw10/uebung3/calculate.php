@@ -10,11 +10,11 @@
 // TODO: Übernehmen Sie hier Funktion calculateResistance aus Übung 3a der Serie
 //       "Interaktive Webapplikationen" und nehmen Sie Anpassungen vor, welche
 //       für PHP notwendig sind.
-
+validateParameters();
 function calculate() {
 
     if ($wiring == 'serial') {
-        $totalResistance = parseFloat($r1) + parseFloat($r2);
+        $totalResistance = $r1 + $r2;
     } else if ($wiring == 'parallel') {
         $totalResistance = $r1 * $r2 / ($r1 + $r2);
     }
