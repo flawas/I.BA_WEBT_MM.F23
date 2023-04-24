@@ -10,20 +10,6 @@
 // TODO: Übernehmen Sie hier Funktion calculateResistance aus Übung 3a der Serie
 //       "Interaktive Webapplikationen" und nehmen Sie Anpassungen vor, welche
 //       für PHP notwendig sind.
-validateParameters();
-function calculate() {
-
-    if ($wiring == 'serial') {
-        $totalResistance = $r1 + $r2;
-    } else if ($wiring == 'parallel') {
-        $totalResistance = $r1 * $r2 / ($r1 + $r2);
-    }
-    
-    return "Idealgewicht $totalResistance";
-}
-
-
-
 function validateParameters() {
     $valid = true;
     
@@ -50,7 +36,12 @@ if (validateParameters()) {
     $r2 = $_POST['r2'];
     $wiring = $_POST['wiring'];
     // TODO: Ausgabe des Idealgewichts
-    calulate();
+    if ($wiring == 'serial') {
+        $totalResistance = $r1 + $r2;
+    } else if ($wiring == 'parallel') {
+        $totalResistance = $r1 * $r2 / ($r1 + $r2);
+    }
+    echo "Idealgewicht $totalResistance";
 }
 ?>
     <a href="resistanceForm.html">Zurück zum Formular</a>
