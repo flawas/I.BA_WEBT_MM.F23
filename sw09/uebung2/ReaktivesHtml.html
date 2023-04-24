@@ -17,6 +17,8 @@
         <!-- TODO: Ausgabe von Hallo gefolgt von obj.name -->
         <p id="output">{{ "Hallo " + name}} </p>
 
+        <button v-on:clik="name=''">Clear</button>
+
     </form>
     <script>
         Vue.createApp({
