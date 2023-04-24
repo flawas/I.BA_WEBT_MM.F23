@@ -12,13 +12,13 @@
 //       für PHP notwendig sind.
 
 function calculate() {
-    if($valid = true){
-        if ($wiring == 'serial') {
-            $totalResistance = parseFloat($r1) + parseFloat($r2);
-        } else if ($wiring == 'parallel') {
-            $totalResistance = $r1 * $r2 / ($r1 + $r2);
-        }
+
+    if ($wiring == 'serial') {
+        $totalResistance = parseFloat($r1) + parseFloat($r2);
+    } else if ($wiring == 'parallel') {
+        $totalResistance = $r1 * $r2 / ($r1 + $r2);
     }
+    
     echo "Idealgewicht $totalResistance";
 }
 
