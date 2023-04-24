@@ -5,9 +5,8 @@
         <meta charset="utf8">
     </head>
     <body>
-        <?php
-            echo "<h1>Hello</h1>";
-            echo "<p>World!<br></p>";
+        <h1><?php echo "Hello"; ?> </h1>
+        <p><?php echo "World!"; ?> <br></p>
         ?>
     </body>
 </html>
