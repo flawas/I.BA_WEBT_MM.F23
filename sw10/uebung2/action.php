@@ -9,9 +9,10 @@
 <body>
     <?php
     // TODO: Prüfen, ob Parameters 'name' gesetzt ist (ersetzen Sie true)
-    if (true)  {
-
+    if (isset($_POST['name']))  {
+        
         // TODO: Ausgabe des Parameters 'name'
+        echo "<p>Hello " + 'name' + "</p>";
         
     } else {
         echo "<p>Parameter 'name' nicht gesetzt</p>";
