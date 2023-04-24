@@ -17,6 +17,13 @@
         $zahl = mt_rand() / (mt_getrandmax() / 100);
 
         // TODO: Paragraph mit Zahl ausgeben. Klasse green, falls < 50 sonst Klasse red.
+        if($zahl < 50){
+            echo "<p class='green'>'$name'</p>";
+        } else if ($zahl > 50){
+            echo "<p class='red'>'$name'</p>";
+        } else {
+            echo "Calculate Error.";
+        }
 
         ?>
         <input type="hidden" name="action" value="random">
