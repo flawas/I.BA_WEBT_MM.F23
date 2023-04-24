@@ -11,6 +11,18 @@
 //       "Interaktive Webapplikationen" und nehmen Sie Anpassungen vor, welche
 //       für PHP notwendig sind.
 
+function calculate() {
+    if($valid = true){
+        if ($wiring == 'serial') {
+            $totalResistance = parseFloat($r1) + parseFloat($r2);
+        } else if ($wiring == 'parallel') {
+            $totalResistance = $r1 * $r2 / ($r1 + $r2);
+        }
+    }
+    echo "Idealgewicht $totalResistance";
+}
+
+
 
 function validateParameters() {
     $valid = true;
@@ -34,9 +46,11 @@ function validateParameters() {
 
 if (validateParameters()) {
     // TODO: Parameter auslesen und Berechnung des Idealgewichts
-    
+    $r1 = $_POST['r1'];
+    $r2 = $_POST['r2'];
+    $wiring = $_POST['wiring'];
     // TODO: Ausgabe des Idealgewichts
-    
+    calulate();
 }
 ?>
     <a href="resistanceForm.html">Zurück zum Formular</a>
