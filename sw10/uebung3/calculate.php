@@ -19,7 +19,7 @@ function calculate() {
         $totalResistance = $r1 * $r2 / ($r1 + $r2);
     }
     
-    echo "Idealgewicht $totalResistance";
+    return "Idealgewicht $totalResistance";
 }
 
 
