@@ -12,7 +12,7 @@
     if (isset($_POST['name']))  {
         
         // TODO: Ausgabe des Parameters 'name'
-        echo "Hello "'name'"";
+        echo "Hello ";
         
     } else {
         echo "<p>Parameter 'name' nicht gesetzt</p>";
