@@ -24,7 +24,7 @@ function validateParameters() {
 }
 
 if (validateParameters()) {
-    $conn = mysqli_connect("flawasch.mysql.db.internal", "flawasch_hslu", "UbXGbs1kvLPcWdfULoxx", "mailing_list");
+    $conn = mysqli_connect("flawasch.mysql.db.internal", "flawasch_hslu", "UbXGbs1kvLPcWdfULoxx", "flawasch_hslu");
     if (!$conn) { 
         echo "<p>Database connection failed</p>";
     } else {
