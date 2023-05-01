@@ -35,7 +35,7 @@ if (validateParameters()) {
         //       Resulat der Ausführung in $res speichern
 
         $sql = "INSERT INTO mailing_list (email, kategorie)
-            VALUES ('john@example.com', 2)";
+            VALUES ('$email', $kategorie)";
 
         if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
