@@ -47,7 +47,14 @@ if (validateParameters()) {
         // TODO: $email und $kategorie in Tabelle mailing_list einfügen
         //       Resulat der Ausführung in $res speichern
 
-        
+        $sql = "INSERT INTO mailing_list (email, kategorie)
+        VALUES ($email, $kategorie)";
+
+        if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+        } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+        }
 
         
         if ($res) {
