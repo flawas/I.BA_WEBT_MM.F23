@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Übung 1: Newsletter versenden</title>
+    <meta charset="utf8">
+</head>
+
+<body>
+    <form action="versenden_action.php" method="POST">
+        <p>Bitte Formulieren Sie Ihren Newsletter mittels den untenstehenden Feldern:</p>
+        
+        <label for="betreff">Betreff:</label><br>
+        <input id="betreff" name="betreff" required><br>
+
+        <label for="text">Mitteilung:</label></br>
+        <textarea id="text"name="text" required></textarea></br>
+
+        <label for="kategorie">Kategorie:</label></br>
+        <select id="kategorie" name="kategorie" required>
+            <option value="1">Wichtige News</option>
+            <option value="2">Werbung</option>
+            <option value="3">Mehr werbung</option>
+        </select><br>
+
+        <button type="submit">Versenden</button>
+    </form>
+</body>
+
+</html>

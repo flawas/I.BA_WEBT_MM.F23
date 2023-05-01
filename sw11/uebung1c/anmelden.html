@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Übung 1: Anmeldung zum Newsletter</title>
+    <meta charset="utf8">
+</head>
+
+<body>
+    <form action="anmelden_action.php" method="POST">
+        <p>Bitte geben Sie Ihre Email und die gewünschte Kategorie ein:</p>
+
+        <label for="email">Email:</label>
+        <input id="email" name="email" required><br>
+
+        <label for="kategorie">Kategorie:</label>
+        <select id="kategorie" name="kategorie">
+            <option value="1">Wichtige News</option>
+            <option value="2">Werbung</option>
+            <option value="3">Mehr Werbung</option>
+        </select><br>
+        
+        <button type="submit">Anmelden</button>
+    </form>
+</body>
+
+</html>
