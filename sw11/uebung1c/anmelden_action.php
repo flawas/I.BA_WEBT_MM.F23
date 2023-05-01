@@ -6,18 +6,20 @@
     </head>
     <body>
 <?php
-$servername = "flawasch.mysql.db.internal";
-$username = "flawasch_hslu";
-$password = "UbXGbs1kvLPcWdfULoxx";
+function createDBConnection(){
+    $servername = "flawasch.mysql.db.internal";
+    $username = "flawasch_hslu";
+    $password = "UbXGbs1kvLPcWdfULoxx";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password);
+    // Create connection
+    $conn = new mysqli($servername, $username, $password);
 
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
+    // Check connection
+    if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    } 
+    echo "Connected successfully";
+}
 
 function validateParameters() {
     if (!isset($_POST['email'])) {
@@ -37,7 +39,7 @@ function validateParameters() {
 }
 
 if (validateParameters()) {
-    $conn = mysqli_connect("localhost", "root", "", "newsletter");
+    createDBConnection();
     if (!$conn) { 
         echo "<p>Database connection failed</p>";
     } else {
