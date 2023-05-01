@@ -40,7 +40,7 @@ function versendeMails($conn, $betreff, $text, $kategorie) {
         $sql = "SELECT * FROM 'mailing_list'";
         $result = $conn->query($sql);
 
-    if ($res) {
+    if ($result) {
         // TODO: Für jeden Eintrag (while-loop):
         // * (1d) die Emailadresse ausgeben
         // * (1e) das Mail verschicken (Aufruf der Funktion mail)
@@ -60,7 +60,7 @@ function versendeMails($conn, $betreff, $text, $kategorie) {
 
 // main
 if (validateParameters()) {
-    $conn = mysqli_connect("localhost", "root", "", "newsletter");
+    $conn = mysqli_connect("flawasch.mysql.db.internal", "flawasch_hslu", "UbXGbs1kvLPcWdfULoxx", "flawasch_hslu");
     if (!$conn) { 
         echo "<p>Database connection failed</p>";
     } else {
