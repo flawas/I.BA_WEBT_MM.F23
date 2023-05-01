@@ -55,7 +55,7 @@ function versendeMails($conn, $betreff, $text, $kategorie) {
 
 // main
 if (validateParameters()) {
-    $conn = mysqli_connect("localhost", "root", "", "newsletter");
+    $conn = mysqli_connect("flawasch.mysql.db.internal", "flawasch_hslu", "UbXGbs1kvLPcWdfULoxx", "flawasch_hslu");
     if (!$conn) { 
         echo "<p>Database connection failed</p>";
     } else {
