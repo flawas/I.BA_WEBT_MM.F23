@@ -7,7 +7,7 @@
     <body>
 <?php
 $servername = "flawasch.mysql.db.internal";
-$username = "flawas_hslu";
+$username = "flawasch_hslu";
 $password = "UbXGbs1kvLPcWdfULoxx";
 
 // Create connection
