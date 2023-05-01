@@ -6,7 +6,6 @@
     </head>
     <body>
 <?php
-
 function validateParameters() {
     if (!isset($_POST['email'])) {
         echo "<p>Parameter 'email' ist benötigt</p>";
@@ -25,18 +24,7 @@ function validateParameters() {
 }
 
 if (validateParameters()) {
-    $servername = "flawasch.mysql.db.internal";
-    $username = "flawasch_hslu";
-    $password = "UbXGbs1kvLPcWdfULoxx";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password);
-
-    // Check connection
-    if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-    } 
-    echo "Connected successfully";
+    $conn = mysqli_connect("flawasch.mysql.db.internal", "flawasch_hslu", "UbXGbs1kvLPcWdfULoxx", "mailing_list");
     if (!$conn) { 
         echo "<p>Database connection failed</p>";
     } else {
