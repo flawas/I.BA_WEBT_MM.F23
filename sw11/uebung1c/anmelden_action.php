@@ -38,10 +38,10 @@ if (validateParameters()) {
             VALUES ('$email', $kategorie)";
 
         if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-        $res = true;
+            echo "New record created successfully";
+            $res = true;
         } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+            echo "Error: " . $sql . "<br>" . $conn->error;
         }
 
         

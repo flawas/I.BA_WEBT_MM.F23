@@ -33,12 +33,25 @@ function validateParameters() {
 function versendeMails($conn, $betreff, $text, $kategorie) {
     // TODO: Die SQL-Query zur Abfrage der Email nach Kategorie einfügen
     //       Resultat in $res speichern
-
+    $conn = mysqli_connect("flawasch.mysql.db.internal", "flawasch_hslu", "UbXGbs1kvLPcWdfULoxx", "flawasch_hslu");
+    if (!$conn) { 
+        echo "<p>Database connection failed</p>";
+    } else {
+        $sql = "SELECT * FROM 'mailing_list'";
+        $result = $conn->query($sql);
 
     if ($res) {
         // TODO: Für jeden Eintrag (while-loop):
         // * (1d) die Emailadresse ausgeben
         // * (1e) das Mail verschicken (Aufruf der Funktion mail)
+        if ($result->num_rows > 0) {
+            // output data of each row
+            while($row = $result->fetch_assoc()) {
+              echo "E-Mail: " . $row["email"]. " - Kategorie: " . $row["kategorie"]. "<br>";
+            }
+          } else {
+            echo "0 results";
+          }
 
     } else {
         echo "<p>Ein Fehler ist aufgetreten.</p>";
