@@ -1,0 +1,70 @@
+/*
+   Stylesheet for the end project
+   Author: Flavio Waser
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+* {
+    font-family: 'Oswald', sans-serif;
+    font-size: 100%;
+
+}
+
+.myclass-welcome-title {
+    font-family: Oswald, sans-serif;
+    font-size: 400%;
+    font-weight: 700;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    line-height: 140px;
+    text-transform: none;
+    margin: 20px 0;
+    padding-top: 35px;
+    overflow-wrap: break-word;
+    color: wheat
+}
+
+.myclass-color {
+    color: wheat
+}
+
+.myclass-slider {
+    width: 100%;
+    height: 700px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    display:none;
+    border-radius: 5px;
+}
+
+p.blocksatz {
+    text-align: justify;
+}
+
+h6 {
+    text-align: center;
+}
+
+.myclass-stickynav {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+/*
+ * --- Special Mobile Styles ---
+ */ 
+@media screen and (max-width: 700px) {
+	.myclass-slider {
+        height: 200px;
+    }
+    
+    .myclass-welcome-title {
+        font-size: 200%;
+        padding-top:5px;
+    }
+
+}
