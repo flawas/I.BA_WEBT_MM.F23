@@ -70,5 +70,11 @@ h6 {
         font-size: 200%;
         padding-top:5px;
     }
+    .w3-card {
+        margin: 10px;
+    }
+    .w3-row-padding {
+        padding: 10px 8px;
+    }
 
 }
