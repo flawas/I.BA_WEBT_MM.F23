@@ -8,7 +8,6 @@
 * {
     font-family: 'Oswald', sans-serif;
     font-size: 100%;
-
 }
 
 .myclass-welcome-title {
@@ -46,6 +45,7 @@ img.myclass-logo {
 
 p.blocksatz {
     text-align: justify;
+    line-height: 120%;
 }
 
 h6 {
@@ -71,10 +71,10 @@ h6 {
         padding-top:5px;
     }
     .w3-card {
-        margin: 10px;
+        margin: 10px 0px;
     }
     .w3-row-padding {
-        padding: 10px 8px;
+        margin: 20px 0px;
     }
 
 }
