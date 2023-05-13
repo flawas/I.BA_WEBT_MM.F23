@@ -10,6 +10,10 @@
     font-size: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .myclass-welcome-title {
     font-family: Oswald, sans-serif;
     font-size: 400%;
@@ -39,7 +43,7 @@
     border-radius: 5px;
 }
 
-.myclass-formmargin {
+.myclass-formmargin {
     margin: 18px 0px;
 }
 
