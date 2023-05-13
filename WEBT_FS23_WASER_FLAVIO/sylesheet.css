@@ -40,6 +40,10 @@
     border-radius: 5px;
 }
 
+.myclass-logo {
+    height: 50px;
+}
+
 p.blocksatz {
     text-align: justify;
 }
