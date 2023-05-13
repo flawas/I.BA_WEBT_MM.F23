@@ -146,10 +146,6 @@
                         <input type="tel" class="w3-input" id="telefon" name="telefon">
                     </div>
                     <div class="w3-half">
-                        <label for="geburstag">Geburtstag</label><br>
-                        <input type="date" id="geburstag" name="geburstag" min="2000-01-01" max="2018-12-12">
-                    </div>
-                    <div class="w3-half">
                         <label for="mannschaft">Mannschaft</label>
                         <select class="w3-select" name="mannschaft" id="mannschaft">
                             <option value="Wähle deine aktuelle Juniorenklasse aus" disabled selected></option>
@@ -160,11 +156,15 @@
                             <option value="D">U16-Junioren</option>
                         </select>
                     </div>
-                    <div class="w3-row">
+                    <div class="w3-half">
+                        <label for="geburstag">Geburtstag</label><br>
+                        <input type="date" id="geburstag" name="geburstag" min="2000-01-01" max="2018-12-12">
+                    </div>
+                    <div class="w3-half">
                         <label for="email">E-Mail</label>
                         <input id="email" class="w3-input" type="email">
                     </div>
-                    <div> 
+                    <div class="w3-row"> 
                         <label for="bemerkungen">Bemerkungen (Allergene, Medikamenter, etc.)</label>
                         <textarea type="text" class="w3-input" id="bemerkungen" name="bemerkungen" rows="4" cols="50"></textarea>
                     </div>
