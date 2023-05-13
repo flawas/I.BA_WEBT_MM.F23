@@ -41,9 +41,6 @@
         <img class="myclass-slider" src="img/davos_monstein.jpg";>
         <img class="myclass-slider" src="img/davos_sommer.jpg";>
         <img class="myclass-slider" src="img/davos_bahn.jpg";>
-   
-
-     
 
         <div class="w3-row-padding w3-center w3-margin-top">
             <h1 class="myclass-color">Herzlich Willkommen zum Trainingslager 2023</h2>
@@ -108,22 +105,18 @@
                 <h3>FAQ</h3>
                 <button onclick="accordion('kueche')" class="w3-btn w3-block w3-grey w3-left-align">Küche</button>
                 <div id="kueche" class="w3-container w3-hide">
-                    <h4>Küche</h4>
                     <p class="blocksatz">Es wird ein 3–5-köpfiges Küchenteam vor Ort sein, welches für das leibliche Wohl der Teilnehmer sorgt. </p>
                 </div>
                 <button onclick="accordion('leiterteam')" class="w3-btn w3-block w3-grey w3-left-align">Leiterteam</button>
                 <div id="leiterteam" class="w3-container w3-hide">
-                    <h4>Leiterteam</h4>
                     <p class="blocksatz">Wie in den vergangenen Jahren werden Trainer/Innen und Betreuer vor Ort sein.</p>
                 </div>
                 <button onclick="accordion('versicherung')" class="w3-btn w3-block w3-grey w3-left-align">Versicherung</button>
                 <div id="versicherung" class="w3-container w3-hide">
-                    <h4>Versicherung</h4>
-                    <p class="blocksatz">Ist Sache der TeilnehmerInnen/Eltern</p>
+                    <p class="blocksatz">Die Versicherung ist Sache der TeilnehmerInnen/Eltern</p>
                 </div>
                 <button onclick="accordion('spenden')" class="w3-btn w3-block w3-grey w3-left-align">Spenden</button>
                 <div id="spenden" class="w3-container w3-hide">
-                    <h4>Spenden</h4>
                     <p class="blocksatz">Yanick Wood gibt gerne Auskunft.</p>
                 </div>
             </div>
@@ -131,7 +124,7 @@
         </div>
 
        
-
+        <!-- Anmeldung -->
         <div class="w3-row-padding w3-left w3-margin-top">
             <h1 id="anmeldung" class="myclass-color">Anmeldung</h1>
         </div>
@@ -145,6 +138,9 @@
                     <div class="w3-half">
                         <label for="nachname">Nachname</label>
                         <input id="nachname" name="nachname" class="w3-input" type="text">
+                    </div>
+                    <div class="w3-full">
+
                     </div>
                 </div>
                 
@@ -161,7 +157,7 @@
                 <label for="email">E-Mail</label>
                 <input id="email" class="w3-input" type="email">
                 <label for="geburstag">Geburtstag</label>
-                <input type="datetime-local" id="geburstag" name="geburstag">
+                <input type="date" id="geburstag" name="geburstag">
             </form>
         </section>
     </div>

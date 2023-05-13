@@ -1,0 +1,5 @@
+<?php
+
+    // Validierung und Speicherung
+    
+?>
