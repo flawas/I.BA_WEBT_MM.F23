@@ -141,29 +141,33 @@
                         <label for="nachname">Nachname</label>
                         <input id="nachname" name="nachname" class="w3-input" type="text">
                     </div>
-                    <div class="w3-full">
-
+                    <div class="w3-half">
+                        <label for="telefon">Natel Eletern für Notfälle</label>
+                        <input type="tel" class="w3-input" id="telefon" name="telefon">
+                    </div>
+                    <div class="w3-half">
+                        <label for="geburstag">Geburtstag</label>
+                        <input type="date" id="geburstag" name="geburstag">
+                    </div>
+                    <div class="w3-third">
+                        <label for="mannschaft">Mannschaft</label>
+                        <select class="w3-select" name="mannschaft" id="mannschaft">
+                            <option value="Wähle deine aktuelle Juniorenklasse aus" disabled selected></option>
+                            <option value="D">E-Junioren</option>
+                            <option value="D">D-Junioren</option>
+                            <option value="D">D-Junioren</option>
+                            <option value="D">C-Junioren</option>
+                            <option value="D">U16-Junioren</option>
+                        </select>
+                    </div>
+                    <div class="w3-twothird">
+                        <label for="email">E-Mail</label>
+                        <input id="email" class="w3-input" type="email">
                     </div>
                 </div>
-                
-                <label for="mannschaft">Mannschaft</label>
-                <select class="w3-select" name="mannschaft" id="mannschaft">
-                    <option value="Wähle deine aktuelle Juniorenklasse aus" disabled selected></option>
-                    <option value="D">E-Junioren</option>
-                    <option value="D">D-Junioren</option>
-                    <option value="D">D-Junioren</option>
-                    <option value="D">C-Junioren</option>
-                    <option value="D">U16-Junioren</option>
-                </select>
-                
-                <label for="email">E-Mail</label>
-                <input id="email" class="w3-input" type="email">
-                <label for="telefon">Natel Eletern für Notfälle</label>
-                <input type="tel" class="w3-input" id="telefon" name="telefon">
-                <label for="geburstag">Geburtstag</label>
-                <input type="date" id="geburstag" name="geburstag">
                 <label for="bemerkungen">Bemerkungen (Allergene, Medikamenter, etc.)</label>
-                <input type="text" class="w3-input" id="bemerkungen" name="bemerkungen">
+                <textarea type="text" class="w3-input" id="bemerkungen" name="bemerkungen" rows="4" cols="50">
+                <br>
                 <button class="w3-btn w3-grey">Verbindlich Anmelden</button>
             </form>
         </section>
