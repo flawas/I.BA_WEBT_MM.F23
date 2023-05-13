@@ -39,6 +39,10 @@
     border-radius: 5px;
 }
 
+.myclass-formmargin {
+    margin: 18px 0px;
+}
+
 img.myclass-logo {
     height: 50px;
 }
@@ -72,9 +76,6 @@ h6 {
     }
     .w3-card {
         margin: 10px 0px;
-    }
-    .w3-row-padding {
-        margin: 20px 0px;
     }
 
 }
