@@ -1,7 +1,11 @@
 <?php
 
     // Datenbank Server
-
+    $server = "flawasch.mysql.db.internal";
+    $username = "flawasch_hslu";
+    $password = "UbXGbs1kvLPcWdfULoxx";
+    $database = "flawasch_hslu";
+    $tablename = "webt_mep";
 
     // Validierung und Speicherung
     function validate() {
@@ -28,6 +32,37 @@
         return true;
     }
 
-    if()
+    if(validate) {
+        $conn = mysqli_connect($server, $username, $password, $database);
+        if (!$conn) { 
+            echo "<p>Database connection failed</p>";
+        } else {
+            $vorname = $_POST['vorname'];
+            $nachname = $_POST['nachname'];
+            $mannschaft = $_POST['mannschaft'];
+            $geburtstag = $_POST['geburtstag'];
+            $email = $_POST['email'];
+            $bemerkungen = $_POST['bemerkungen'];
+    
+            $sql = "INSERT INTO $tablename (vorname, nachname, mannschaft, geburstag, email, bemerkungen)
+                VALUES ($vorname, $nachname, $mannschaft, $geburtstag, $email, $bemerkungen)";
+    
+            if ($conn->query($sql) === TRUE) {
+                echo "New record created successfully";
+                $res = true;
+            } else {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+    
+            
+            if ($res) {
+                echo "<p>Besten Dank für Ihre Anmeldung.</p>";
+            } else {
+                echo "<p>Ein Fehler ist aufgetreten.</p>";
+            }
+            mysqli_close($conn);        
+        }
+
+    }
 
 ?>
