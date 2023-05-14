@@ -96,7 +96,7 @@
 
                 if($_COOKIE['angemeldet'] == true){
                     alert("info", "Anmeldung nicht übermittlet", "Du bist bereits für das Lager angemeldet");
-                    setcookie("formular", false);
+                    setcookie("formular", true);
                 } else {
                     if ($conn->query($sql) === TRUE) {
                         alert("success", "Übermittelt", "Die Anmeldung wurde erfolgreich gespeichert.");
