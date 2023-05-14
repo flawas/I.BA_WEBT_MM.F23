@@ -44,7 +44,29 @@
         return true;
     }
 
-
+    function alert($level, $title, $message) {
+        if($level == "success") {
+            ?>
+            <div class='w3-panel w3-green'>
+                <h3><?php echo $title;?></h3>
+                <p><?php echo $message; ?></p>
+            </div><?php
+        }
+        if($level == "info") {
+            ?>
+            <div class='w3-panel w3-green'>
+                <h3><?php echo $title;?></h3>
+                <p><?php echo $message; ?></p>
+            </div><?php
+        }
+        if($level == "error") {
+            ?>
+            <div class='w3-panel w3-green'>
+                <h3><?php echo $title;?></h3>
+                <p><?php echo $message; ?></p>
+            </div><?php
+        }
+    }
     
     if(validate_parameters()){
         // Create connection
@@ -56,7 +78,6 @@
         if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
         }
-        echo "Connected successfully";
 
         $vorname = $_SESSION['vorname'];
         $nachname = $_SESSION['nachname'];
@@ -65,15 +86,14 @@
         $geburtstag = $_SESSION['geburtstag'];
         $bemerkungen = $_SESSION['bemerkungen'];
 
-        echo $geburstag;
-
         $sql = "INSERT INTO webt_mep (vorname, nachname, mannschaft, email, bemerkungen, geburtstag)
             VALUES ('$vorname', '$nachname', '$mannschaft', '$email', '$bemerkungen', '$geburtstag')";
 
         if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully";
+            alert("success", "Übermittelt", "Die Anmeldung wurde erfolgreich gespeichert.")
             $res = true;
         } else {
+            //alert("error", "Fehler", "Die Anmeldung konnte nicht verarbeitet werden.")
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
 
