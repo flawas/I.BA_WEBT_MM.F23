@@ -39,12 +39,6 @@
                     echo "<p>Parameter 'geburtstag' ist benötigt</p>";
                     return false;
                 }
-                $_SESSION['vorname'] = $_POST['vorname'];
-                $_SESSION['nachname'] = $_POST['nachname'];
-                $_SESSION['mannschaft'] = $_POST['mannschaft'];
-                $_SESSION['email'] = $_POST['email'];
-                $_SESSION['geburtstag'] = $_POST['geburtstag'];
-                $_SESSION['bemerkungen'] = $_POST['bemerkungen'];
 
                 return true;
             }
@@ -87,7 +81,13 @@
                 if($_COOKIE['angemeldet'] == true){
                     alert("info", "Anmeldung nicht übermittlet", "Du bist bereits für das Lager angemeldet");
                 } else {
-
+                    $_SESSION['vorname'] = $_POST['vorname'];
+                    $_SESSION['nachname'] = $_POST['nachname'];
+                    $_SESSION['mannschaft'] = $_POST['mannschaft'];
+                    $_SESSION['email'] = $_POST['email'];
+                    $_SESSION['geburtstag'] = $_POST['geburtstag'];
+                    $_SESSION['bemerkungen'] = $_POST['bemerkungen'];
+                    
                     $vorname = $_SESSION['vorname'];
                     $nachname = $_SESSION['nachname'];
                     $mannschaft = $_SESSION['mannschaft'];
