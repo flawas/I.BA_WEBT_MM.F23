@@ -113,7 +113,7 @@
         ?>
 
         <h1><?php
-        if (isset($_COOKIE['formular'])) {
+        if ($_COOKIE['formular'] == true) {
             echo "Vorhandene Daten";
         } else {
             echo "Übermittelte Daten";
