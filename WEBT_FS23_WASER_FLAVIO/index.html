@@ -2,21 +2,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
     <title>HCWK Lageranmeldung</title>
-    <link rel="icon" type="image/png" href="img/favicon.jpg">
-    
+    <link rel="icon" type="image/png" href="img/favicon.jpg"> 
     <link rel="stylesheet" href="sylesheet.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-   
 </head>
 
 <body>
     <!-- Navigation desktop -->
-    <nav class="w3-bar w3-white myclass-stickynav">
-        <img src="img/logo.jpg" class="w3-bar-item w3-image w3-hide-small myclass-logo">
+    <nav id="home" class="w3-bar w3-white myclass-stickynav">
+        <img src="img/logo.jpg" class="w3-bar-item w3-image myclass-logo">
         <a href="#home" class="w3-bar-item w3-button w3-hide-small">Home</a>
         <a href="#informationen" class="w3-bar-item w3-button w3-hide-small">Informationen</a>
         <a href="#anmeldung" class="w3-bar-item w3-button w3-hide-small">Anmeldung</a>
@@ -35,7 +31,7 @@
 
     <!-- Welcome section  -->
     
-    <h1 id="home" class="myclass-welcome-title">HCWK Traingslager Davos</h1>
+    <h1 class="myclass-welcome-title">HCWK Traingslager Davos</h1>
 
     <div class="w3-container">
         <img class="myclass-slider" src="img/davos_monstein.jpg";>
@@ -125,10 +121,12 @@
 
        
         <!-- Anmeldung -->
-        <div class="w3-row-padding w3-left w3-margin-top">
-            <h1 id="anmeldung" class="myclass-color">Anmeldung</h1>
-            <p class="blocksatz">Natels, Tablets und sonstige elektronische Geräte sind nicht erlaubt.</p>
-            <p class="blocksatz">Persönliche Vereinsbekleidung ist ein gutes Kennzeichnen.</p>
+        <div id="anmeldung" class="w3-row-padding w3-left w3-margin-top">
+            <h1 class="myclass-color">Anmeldung</h1>
+            <div class="w3-panel w3-pale-blue">
+                <p class="blocksatz">Natels, Tablets und sonstige elektronische Geräte sind nicht erlaubt.</p>
+                <p class="blocksatz">Persönliche Vereinsbekleidung ist ein gutes Kennzeichnen.</p>
+            </div>
         </div>
         <section class="w3-container w3-border-grey">
             <form class="w3-container myclass-color" action="server.php" method="POST">
@@ -175,11 +173,16 @@
         </section>
 
         <!-- Kontakt-->
-        <div class="w3-row-padding w3-left w3-margin-top">
-            <h1 id="anmeldung" class="myclass-color">Kontakt</h1>
+        <div id="kontakt" class="w3-panel myclass-color">
+            <div class="w3-row-padding w3-left w3-margin-top">
+                <h1 class="myclass-color">Kontakt</h1>
+                <p class="blocksatz">
+                    Wir freuen uns auf ein erfolgreiches,
+                    lehrreiches und lustiges
+                    Trainingslager 2023! <br> Komm doch auch!
+                </p>
+            </div>
         </div>
-
-
     </div>
 </body>
 
