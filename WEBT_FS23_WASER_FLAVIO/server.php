@@ -96,22 +96,15 @@
 
                 if($_COOKIE['angemeldet'] == true){
                     alert("info", "Anmeldung nicht übermittlet", "Du bist bereits für das Lager angemeldet");
+                    setcookie("formular", false);
                 } else {
                     if ($conn->query($sql) === TRUE) {
                         alert("success", "Übermittelt", "Die Anmeldung wurde erfolgreich gespeichert.");
                         setcookie("angemeldet", true);
-                        $res = true;
                     } else {
                         alert("error", "Fehler", "Die Anmeldung konnte nicht verarbeitet werden.");
                         echo "Error: " . $sql . "<br>" . $conn->error;
                     }
-            
-            
-                    if ($res) {
-                        echo "<p>Besten Dank für Ihre Anmeldung.</p>";
-                    } else {
-                        echo "<p>Ein Fehler ist aufgetreten.</p>";
-                    }  
                 }
 
                 mysqli_close($conn);
@@ -119,13 +112,13 @@
 
         ?>
 
-        <h1>Übermittelte Daten</h1>
+        <h1><?php isset($_COOKIE['formular'])){ echo "Vorhandene Daten"} else { echo "Übermittelte Daten"};?></h1>
         <ul class="w3-ul">
             <li><?php echo $_SESSION['vorname']; ?></li>
             <li><?php echo $_SESSION['nachname']; ?></li>
             <li><?php echo $_SESSION['mannschaft']; ?></li>
             <li><?php echo $_SESSION['email']; ?></li>
-            <li><?php echo $_SESSION['geburstag']; ?></li>
+            <li><?php echo $_SESSION['geburtstag']; ?></li>
             <li><?php echo $_SESSION['bemerkungen']; ?></li>
         </ul>
     </div>
