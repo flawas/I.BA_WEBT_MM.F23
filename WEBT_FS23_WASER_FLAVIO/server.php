@@ -112,7 +112,7 @@
 
         ?>
 
-        <h1><?php isset($_COOKIE['formular'])){ echo "Vorhandene Daten"} else { echo "Übermittelte Daten"};?></h1>
+        <h1><?php isset($_COOKIE['formular'])){ echo "Vorhandene Daten"; } else { echo "Übermittelte Daten"; }?></h1>
         <ul class="w3-ul">
             <li><?php echo $_SESSION['vorname']; ?></li>
             <li><?php echo $_SESSION['nachname']; ?></li>
