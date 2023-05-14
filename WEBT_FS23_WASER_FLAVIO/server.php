@@ -6,10 +6,6 @@
     $password = "UbXGbs1kvLPcWdfULoxx";
     $database = "flawasch_hslu";
 
-    $conn = mysqli_connect($server, $username, $password, $database);
-    if (!$conn) { 
-        echo "<p>Database connection failed</p>";
-
     // Validierung und Speicherung
     function validate() {
         if (!isset($_POST['vorname'])) {
@@ -20,16 +16,16 @@
             echo "<p>Parameter 'Nachname' ist benötigt</p>";
             return false;
         }
-        if (!isset($_POST['Mannschaft'])) {
+        if (!isset($_POST['mannschaft'])) {
             echo "<p>Parameter 'Mannschaft' ist benötigt</p>";
-            return false;
-        }
-        if (!isset($_POST['geburtstag'])) {
-            echo "<p>Parameter 'geburtstag' ist benötigt</p>";
             return false;
         }
         if (!isset($_POST['email'])) {
             echo "<p>Parameter 'E-Mail' ist benötigt</p>";
+            return false;
+        }
+        if (!isset($_POST['geburtstag'])) {
+            echo "<p>Parameter 'geburtstag' ist benötigt</p>";
             return false;
         }
         return true;
