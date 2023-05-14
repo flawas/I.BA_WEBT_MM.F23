@@ -121,7 +121,7 @@
             <li><?php echo $_SESSION['bemerkungen']; ?></li>
         </ul>
 
-        </h1>Angemeldete Personen</h1>
+        <h1>Angemeldete Personen</h1>
         <table class="w3-table">
             <tr>
                 <th>ID</th>
