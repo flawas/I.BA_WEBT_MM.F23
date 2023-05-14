@@ -87,7 +87,7 @@
                     $_SESSION['email'] = $_POST['email'];
                     $_SESSION['geburtstag'] = $_POST['geburtstag'];
                     $_SESSION['bemerkungen'] = $_POST['bemerkungen'];
-                    
+
                     $vorname = $_SESSION['vorname'];
                     $nachname = $_SESSION['nachname'];
                     $mannschaft = $_SESSION['mannschaft'];
@@ -107,7 +107,6 @@
                     }
                 }
 
-                mysqli_close($conn);
             }
 
         ?>
@@ -121,7 +120,31 @@
             <li><?php echo $_SESSION['geburtstag']; ?></li>
             <li><?php echo $_SESSION['bemerkungen']; ?></li>
         </ul>
+        </h1>Angemeldete Personen</h1>
+        <table class="w3-table">
+        <tr>
+            <th>ID</th>
+            <th>Vorname</th>
+            <th>Nachname</th>
+            <ht>Angemeldet</th>
+        </tr>
+        <?php 
+        $sql = "SELECT id, vorname, nachname, timestamp FROM webt_mep";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            echo "<table><tr><th>ID</th><th>Name</th><th>Anmeldezeitpunkt</th></tr>";
+            while($row = $result->fetch_assoc()) {
+                echo "<tr><td>" . $row["id"]. "</td><td>" . $row["vorname"]. " " . $row["nachname"]. "</td><td>" . $row["timestamp"]. "</td></tr>";
+            }
+            echo "</table>";
+        } else {
+            echo "0 results";
+        }
+        ?>
+        </table>
     </div>
+    <?php mysqli_close($conn);?>
 </body>
 <footer class="myclass-colorinverse myclass-footer">
     <h6>© <span id="year"></span> HC Weggis-Küssnacht by Flavio Waser</h6>
