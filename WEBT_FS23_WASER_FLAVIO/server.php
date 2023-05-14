@@ -84,20 +84,20 @@
                 die("Connection failed: " . $conn->connect_error);
                 }
 
-                $vorname = $_SESSION['vorname'];
-                $nachname = $_SESSION['nachname'];
-                $mannschaft = $_SESSION['mannschaft'];
-                $email = $_SESSION['email'];
-                $geburtstag = $_SESSION['geburtstag'];
-                $bemerkungen = $_SESSION['bemerkungen'];
-
-                $sql = "INSERT INTO webt_mep (vorname, nachname, mannschaft, email, bemerkungen, geburtstag)
-                    VALUES ('$vorname', '$nachname', '$mannschaft', '$email', '$bemerkungen', '$geburtstag')";
-
                 if($_COOKIE['angemeldet'] == true){
                     alert("info", "Anmeldung nicht übermittlet", "Du bist bereits für das Lager angemeldet");
-                    setcookie("formular", true);
                 } else {
+
+                    $vorname = $_SESSION['vorname'];
+                    $nachname = $_SESSION['nachname'];
+                    $mannschaft = $_SESSION['mannschaft'];
+                    $email = $_SESSION['email'];
+                    $geburtstag = $_SESSION['geburtstag'];
+                    $bemerkungen = $_SESSION['bemerkungen'];
+                    
+                    $sql = "INSERT INTO webt_mep (vorname, nachname, mannschaft, email, bemerkungen, geburtstag)
+                    VALUES ('$vorname', '$nachname', '$mannschaft', '$email', '$bemerkungen', '$geburtstag')";
+
                     if ($conn->query($sql) === TRUE) {
                         alert("success", "Übermittelt", "Die Anmeldung wurde erfolgreich gespeichert.");
                         setcookie("angemeldet", true);
@@ -112,14 +112,7 @@
 
         ?>
 
-        <h1><?php
-        if ($_COOKIE['formular'] == true) {
-            echo "Vorhandene Daten";
-        } else {
-            echo "Übermittelte Daten";
-        }
-        ?>
-        </h1>
+        <h1>Daten</h1>
         <ul class="w3-ul">
             <li><?php echo $_SESSION['vorname']; ?></li>
             <li><?php echo $_SESSION['nachname']; ?></li>
