@@ -120,27 +120,28 @@
             <li><?php echo $_SESSION['geburtstag']; ?></li>
             <li><?php echo $_SESSION['bemerkungen']; ?></li>
         </ul>
+
         </h1>Angemeldete Personen</h1>
         <table class="w3-table">
-        <tr>
-            <th>ID</th>
-            <th>Vorname</th>
-            <th>Nachname</th>
-            <ht>Anmeldezeitpunkt</th>
-        </tr>
-        <?php 
-        $sql = "SELECT id, vorname, nachname, timestamp FROM webt_mep";
-        $result = $conn->query($sql);
+            <tr>
+                <th>ID</th>
+                <th>Vorname</th>
+                <th>Nachname</th>
+                <th>Anmeldezeitpunkt</th>
+            </tr>
+            <?php 
+            $sql = "SELECT id, vorname, nachname, timestamp FROM webt_mep";
+            $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
-                echo "<tr><td>" . $row["id"]. "</td><td>" . $row["vorname"]. "</td><td>" . $row["nachname"]. "</td><td>" . $row["timestamp"]. "</td></tr>";
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr><td>" . $row["id"]. "</td><td>" . $row["vorname"]. "</td><td>" . $row["nachname"]. "</td><td>" . $row["timestamp"]. "</td></tr>";
+                }
+                echo "</table>";
+            } else {
+                echo "0 results";
             }
-            echo "</table>";
-        } else {
-            echo "0 results";
-        }
-        ?>
+            ?>
         </table>
     </div>
     <?php mysqli_close($conn);?>
