@@ -136,7 +136,7 @@
 
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
-                    echo "<tr><td>" . $row["id"]. "</td><td>" . $row["vorname"]. "</td><td>" . "</td><td>" . $row["mannschaft"]. $row["nachname"]. "</td><td>" . $row["timestamp"]. "</td></tr>";
+                    echo "<tr><td>" . $row["id"]. "</td><td>" . $row["vorname"]. "</td><td>" . $row["mannschaft"]. "</td><td>" . $row["nachname"]. "</td><td>" . $row["timestamp"]. "</td></tr>";
                 }
                 echo "</table>";
             } else {
