@@ -36,7 +36,7 @@
         return true;
     }
 
-    if(validate) {
+    if(validate()) {
         $conn = mysqli_connect($server, $username, $password, $database);
         if (!$conn) { 
             echo "<p>Database connection failed</p>";
