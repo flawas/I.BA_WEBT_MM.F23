@@ -126,14 +126,13 @@
             <th>ID</th>
             <th>Vorname</th>
             <th>Nachname</th>
-            <ht>Angemeldet</th>
+            <ht>Anmeldezeitpunkt</th>
         </tr>
         <?php 
         $sql = "SELECT id, vorname, nachname, timestamp FROM webt_mep";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
-            echo "<table><tr><th>ID</th><th>Name</th><th>Anmeldezeitpunkt</th></tr>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr><td>" . $row["id"]. "</td><td>" . $row["vorname"]. " " . $row["nachname"]. "</td><td>" . $row["timestamp"]. "</td></tr>";
             }
