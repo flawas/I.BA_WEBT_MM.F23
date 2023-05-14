@@ -5,7 +5,6 @@
     $username = "flawasch_hslu";
     $password = "UbXGbs1kvLPcWdfULoxx";
     $database = "flawasch_hslu";
-    $tablename = "webt_mep";
 
     $conn = mysqli_connect($server, $username, $password, $database);
     if (!$conn) { 
@@ -48,7 +47,7 @@
             $email = $_POST['email'];
             $bemerkungen = $_POST['bemerkungen'];
     
-            $sql = "INSERT INTO $tablename (vorname, nachname, mannschaft, geburstag, email, bemerkungen)
+            $sql = "INSERT INTO webt_mep (vorname, nachname, mannschaft, geburstag, email, bemerkungen)
                 VALUES ($vorname, $nachname, $mannschaft, $geburtstag, $email, $bemerkungen)";
     
             if ($conn->query($sql) === TRUE) {
