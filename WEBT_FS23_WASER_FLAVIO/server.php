@@ -7,6 +7,10 @@
     $database = "flawasch_hslu";
     $tablename = "webt_mep";
 
+    $conn = mysqli_connect($server, $username, $password, $database);
+    if (!$conn) { 
+        echo "<p>Database connection failed</p>";
+
     // Validierung und Speicherung
     function validate() {
         if (!isset($_POST['vorname'])) {
