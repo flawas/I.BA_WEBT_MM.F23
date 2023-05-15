@@ -121,7 +121,7 @@
             <li><?php echo $_SESSION['bemerkungen']; ?></li>
         </ul>
 
-        <h1>Angemeldete Personen</h1>
+        <h2>Angemeldete Personen</h2>
         <table class="w3-table">
             <tr>
                 <th>ID</th>
@@ -131,7 +131,7 @@
                 <th>Anmeldung</th>
             </tr>
             <?php 
-            $sql = "SELECT id, vorname, nachname, mannschaft, timestamp FROM webt_mep";
+            $sql = "SELECT id, vorname, nachname, mannschaft, timestamp FROM webt_mep WHERE ID < 100";
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
