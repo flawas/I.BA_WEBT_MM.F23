@@ -77,6 +77,12 @@ h6 {
     /*display: contents;*/
 }
 
+canvas {
+    background-color: wheat;
+    border-radius: 40px;
+    border:black 3px solid;
+}
+
 /*
  * --- Special Mobile Styles ---
  */ 
@@ -92,5 +98,4 @@ h6 {
     .w3-card {
         margin: 10px 0px;
     }
-
 }
