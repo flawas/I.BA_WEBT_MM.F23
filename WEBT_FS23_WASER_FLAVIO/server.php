@@ -148,5 +148,5 @@
     <?php mysqli_close($conn);?>
 </body>
 <footer class="myclass-colorinverse myclass-footer">
-    <h6>© <span id="year"></span> HC Weggis-Küssnacht by Flavio Waser</h6>
+    <h6>HC Weggis-Küssnacht by Flavio Waser</h6>
 </footer>
