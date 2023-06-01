@@ -57,6 +57,10 @@ html {
     padding: 1px 0px;
 }
 
+.myclass-container {
+    min-height:375px;
+}
+
 img.myclass-logo {
     height: 50px;
 }
