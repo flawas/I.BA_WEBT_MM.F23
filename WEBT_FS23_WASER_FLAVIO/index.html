@@ -1,198 +1,200 @@
-<!DOCTYPE html lang="de">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>HCWK Lageranmeldung</title>
-    <link rel="icon" type="image/png" href="img/favicon.jpg"> 
-    <link rel="stylesheet" href="sylesheet.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="javascript.js"></script>
-</head>
-
-<body onload="draw();">
-    <!-- Navigation desktop -->
-    <nav class="w3-bar w3-white myclass-stickynav">
-        <img src="img/logo.jpg" class="w3-bar-item w3-image myclass-logo" alt="Logo">
-        <a href="#home" class="w3-bar-item w3-button w3-hide-small">Home</a>
-        <a href="#informationen" class="w3-bar-item w3-button w3-hide-small">Informationen</a>
-        <a href="#anmeldung" class="w3-bar-item w3-button w3-hide-small">Anmeldung</a>
-        <button class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
-            onclick="document.getElementById('sub').classList.toggle('w3-hide');"><span class="material-symbols-outlined">menu</span></button>
-    </nav>
-
-    <!-- Navigation mobile -->
-    <nav id="sub" class="w3-bar-block w3-grey w3-hide">
-        <a href="#home" class="w3-bar-item w3-button">Home</a>
-        <a href="#informationen" class="w3-bar-item w3-button">Informationen</a>
-        <a href="#anmeldung" class="w3-bar-item w3-button">Anmeldung</a>
-    </nav>
-
-    <!-- Welcome section  -->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>HCWK Lageranmeldung</title>
+        <link rel="icon" type="image/png" href="img/favicon.jpg"> 
+        <link rel="stylesheet" href="sylesheet.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <script src="javascript.js"></script>
+    </head>
     
-    <h1 id="home" class="myclass-welcome-title">HCWK Traingslager Davos</h1>
-
-    <div class="w3-container">
-        <img class="myclass-slider" src="img/davos_monstein.jpg"; alt="Davos Monstein">
-        <img class="myclass-slider" src="img/davos_sommer.jpg"; alt="Davos im Sommer">
-        <img class="myclass-slider" src="img/davos_bahn.jpg"; alt="Davos Bahn">
-        <script>
-            // Slider script
-            var index = 0;
-            carousel();
-        </script>    
-        <div class="w3-row-padding w3-center w3-margin-top">
-            <h1 class="myclass-color">Herzlich Willkommen zum Trainingslager 2023</h2>
-            <p class="blocksatz">Mit grosser Freude dürfen wir euch verkünden, dass eine Lokation für
-            das Trainingslager 2023 gefunden wurde und somit das nächste Trainingslager kommen kann.
-            Dieses Jahr führt uns die Reise in das schöne Landwassertal nach Davos. Wo unsere Unterkunft «Gruppenhaus Spinabad» wenige Fahrminuten ausserhalb vom Dorfzentrum liegt.
-            An diesem Trainingslager können alle Juniorinnen und Junioren des
-            HC Weggis-Küssnacht, von den E Junioren bis zum U16 Team, teilnehmen.
-            Neben der wertvollen sportlichen Weiterentwicklung steigert das
-            Trainingslager den Teamzusammenhalt. Diese Kombination ist eine gute Erfahrung für jedes Kind.
-            Wir freuen uns, wenn auch Ihre Tochter/Ihr Sohn am diesjährigen
-            Trainingslager teilnimmt.
-            </p>
-        </div>
+    <body onload="draw();">
+        <!-- Navigation desktop -->
+        <nav class="w3-bar w3-white myclass-stickynav">
+            <img src="img/logo.jpg" class="w3-bar-item w3-image myclass-logo" alt="Logo">
+            <a href="#home" class="w3-bar-item w3-button w3-hide-small">Home</a>
+            <a href="#informationen" class="w3-bar-item w3-button w3-hide-small">Informationen</a>
+            <a href="#anmeldung" class="w3-bar-item w3-button w3-hide-small">Anmeldung</a>
+            <button class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="document.getElementById('sub').classList.toggle('w3-hide');"><span class="material-symbols-outlined">menu</span></button>
+        </nav>
     
-        <div class="w3-row-padding w3-left w3-margin-top">
-            <h1 id="informationen" class="myclass-color">Informationen</h1>
-        </div>
+        <!-- Navigation mobile -->
+        <nav id="sub" class="w3-bar-block w3-grey w3-hide">
+            <a href="#home" class="w3-bar-item w3-button">Home</a>
+            <a href="#informationen" class="w3-bar-item w3-button">Informationen</a>
+            <a href="#anmeldung" class="w3-bar-item w3-button">Anmeldung</a>
+        </nav>
+    
+        <!-- Welcome section  -->
         
-        <div class="w3-row-padding w3-center w3-margin-top">
-            <div class="w3-quarter">
-              <div class="w3-card w3-container" style="min-height:375px">
-                <h3>Treffpunkt</h3><br>
-                <img src="img/location.png" alt="Pinnadel">
-                <p>Sonntag, 9. Juli 2023</p>
-                <p>Treffpunkt: 08:30 Uhr, Küssnacht Bahnhof</p>
-                <p>Wichtig: Verpflegung für die Hinreise (Mittagessen) mitnehmen</p>
-              </div>
+        <h1 id="home" class="myclass-welcome-title">HCWK Traingslager Davos</h1>
+    
+        <div class="w3-container">
+            <img class="myclass-slider" src="img/davos_monstein.jpg"; alt="Davos Monstein">
+            <img class="myclass-slider" src="img/davos_sommer.jpg"; alt="Davos im Sommer">
+            <img class="myclass-slider" src="img/davos_bahn.jpg"; alt="Davos Bahn">
+            <script>
+                // Slider script
+                var index = 0;
+                carousel();
+            </script>    
+            <div class="w3-row-padding w3-center w3-margin-top">
+                <h1 class="myclass-color">Herzlich Willkommen zum Trainingslager 2023</h2>
+                <p class="blocksatz">Mit grosser Freude dürfen wir euch verkünden, dass eine Lokation für
+                das Trainingslager 2023 gefunden wurde und somit das nächste Trainingslager kommen kann.
+                Dieses Jahr führt uns die Reise in das schöne Landwassertal nach Davos. Wo unsere Unterkunft «Gruppenhaus Spinabad» wenige Fahrminuten ausserhalb vom Dorfzentrum liegt.
+                An diesem Trainingslager können alle Juniorinnen und Junioren des
+                HC Weggis-Küssnacht, von den E Junioren bis zum U16 Team, teilnehmen.
+                Neben der wertvollen sportlichen Weiterentwicklung steigert das
+                Trainingslager den Teamzusammenhalt. Diese Kombination ist eine gute Erfahrung für jedes Kind.
+                Wir freuen uns, wenn auch Ihre Tochter/Ihr Sohn am diesjährigen
+                Trainingslager teilnimmt.
+                </p>
             </div>
-            
-            <div class="w3-quarter">
-              <div class="w3-card w3-container" style="min-height:375px">
-                <h3>Kosten</h3><br>
-                <img src="img/cash.png" alt="Geld"> 
-                <p>CHF 250.00 pro Teilnehmer</p>
-                <p class="blocksatz">In diesem
-                    Betrag ist der Transport, die Unterkunft, die Hallenbenützung, ein
-                    Ausflug sowie die Verpflegung inbegriffen.</p>
-              </div>
-            </div>
-            
-            <div class="w3-quarter">
-              <div class="w3-card w3-container" style="min-height:375px">
-                <h3>Anmeldung</h3><br>
-                <img src="img/book.png" alt="Buch">
-                <p>Die Anmeldung erfolgt über die Vereinshomepage des HCWK.</p>
-                <a href="#anmeldung"><button class="w3-button w3-block w3-white w3-border w3-border-black">Hier Anmelden</button></a>
-              </div>
-            </div>
-
-            <div class="w3-quarter">
-                <div class="w3-card w3-container" style="min-height:375px">
-                    <h3>Rückreise</h3><br>
-                    <img src="img/train.png" alt="Zug">
-                    <p>Samstag, 15. Juli 2023</p>
-                    <p>Ankunft: 18:00 Uhr, Küssnacht Bahnhof</p>
-                </div>
-            </div>
-            
-            <!-- Accordeon -->
-            <div class="w3-container">
-                <h3>Lager FAQ</h3>
-                <button onclick="accordion('kueche')" class="w3-btn w3-block w3-grey w3-left-align">Küche</button>
-                <div id="kueche" class="w3-container w3-hide">
-                    <p class="blocksatz">Es wird ein 3–5-köpfiges Küchenteam vor Ort sein, welches für das leibliche Wohl der Teilnehmer sorgt. </p>
-                </div>
-                <button onclick="accordion('leiterteam')" class="w3-btn w3-block w3-grey w3-left-align">Leiterteam</button>
-                <div id="leiterteam" class="w3-container w3-hide">
-                    <p class="blocksatz">Wie in den vergangenen Jahren werden Trainer/Innen und Betreuer vor Ort sein.</p>
-                </div>
-                <button onclick="accordion('versicherung')" class="w3-btn w3-block w3-grey w3-left-align">Versicherung</button>
-                <div id="versicherung" class="w3-container w3-hide">
-                    <p class="blocksatz">Die Versicherung ist Sache der TeilnehmerInnen/Eltern</p>
-                </div>
-                <button onclick="accordion('spenden')" class="w3-btn w3-block w3-grey w3-left-align">Spenden</button>
-                <div id="spenden" class="w3-container w3-hide">
-                    <p class="blocksatz">Yanick Wood gibt gerne Auskunft.</p>
-                </div>
-            </div>
-
-        </div>
-
-       
-        <!-- Anmeldung -->
-        <div id="anmeldung" class="w3-row-padding w3-left w3-margin-top">
-            <h1 class="myclass-color">Anmeldung</h1>
-            <div class="w3-panel w3-pale-blue">
-                <p class="blocksatz">Natels, Tablets und sonstige elektronische Geräte sind nicht erlaubt.</p>
-                <p class="blocksatz">Persönliche Vereinsbekleidung ist ein gutes Kennzeichnen.</p>
-            </div>
-        </div>
-        <section class="w3-container w3-border-grey">
-            <form class="w3-container myclass-color" method="POST" onsubmit="return isOK()" action="server.php">
-                <div class="w3-row-padding">
-                    <div id="divvorname" class="w3-half">
-                        <label id="labelvorname" for="vorname">Vorname</label>
-                        <input id="vorname" name="vorname" class="w3-input" type="text">
-                    </div>
-                    <div id="divnachname" class="w3-half">
-                        <label id="labelnachname" for="nachname">Nachname</label>
-                        <input id="nachname" name="nachname" class="w3-input" type="text">
-                    </div>
-                    <div id="divtelefon" class="w3-half">
-                        <label id="labeltelefon" for="telefon">Natel Eletern für Notfälle</label>
-                        <input type="tel" class="w3-input" id="telefon" name="telefon">
-                    </div>
-                    <div id="divmannschaft" class="w3-half">
-                        <label id="labelmannschaft" for="mannschaft">Mannschaft</label>
-                        <select class="w3-select" name="mannschaft" id="mannschaft">
-                            <option value="" disabled selected>Wähle deine aktuelle Juniorenklasse aus</option>
-                            <option value="E-Junioren">E-Junioren</option>
-                            <option value="D-Junioren">D-Junioren</option>
-                            <option value="C-Junioren">C-Junioren</option>
-                            <option value="U16-Junioren">U16-Junioren</option>
-                        </select>
-                    </div>
-                    <div id="divgeburtstag" class="w3-half">
-                        <label id="labelgeburtstag" for="geburtstag">Geburtstag</label><br>
-                        <input type="date" id="geburtstag" name="geburtstag" min="1999-01-01" max="2018-12-12">
-                    </div>
-                    <div id="divemail" class="w3-half">
-                        <label id="labelemail" for="email">E-Mail</label>
-                        <input id="email" name="email" class="w3-input" type="email">
-                    </div>
-                    <div class="w3-row"> 
-                        <label for="bemerkungen">Bemerkungen (Allergene / Medikamente)</label>
-                        <textarea type="text" class="w3-input" id="bemerkungen" name="bemerkungen" rows="4" cols="50"></textarea>
-                    </div>
-                </div>
-                <br>
-                <button class="w3-btn w3-grey">Verbindlich Anmelden</button>
-            </form>
-        </section>
-
-        <!-- Kontakt-->
-        <div class="w3-panel myclass-color">
+        
             <div class="w3-row-padding w3-left w3-margin-top">
-                <h3>
-                    Wir freuen uns auf ein erfolgreiches,
-                    lehrreiches und lustiges
-                    Trainingslager 2023! <br> Komm doch auch!
-                </h3>
-                <canvas id="floorball" ></canvas>
+                <h1 id="informationen" class="myclass-color">Informationen</h1>
+            </div>
+            
+            <div class="w3-row-padding w3-center w3-margin-top">
+                <div class="w3-quarter">
+                  <div class="w3-card w3-container" style="min-height:375px">
+                    <h3>Treffpunkt</h3><br>
+                    <img src="img/location.png" alt="Pinnadel">
+                    <p>Sonntag, 9. Juli 2023</p>
+                    <p>Treffpunkt: 08:30 Uhr, Küssnacht Bahnhof</p>
+                    <p>Wichtig: Verpflegung für die Hinreise (Mittagessen) mitnehmen</p>
+                  </div>
+                </div>
+                
+                <div class="w3-quarter">
+                  <div class="w3-card w3-container" style="min-height:375px">
+                    <h3>Kosten</h3><br>
+                    <img src="img/cash.png" alt="Geld"> 
+                    <p>CHF 250.00 pro Teilnehmer</p>
+                    <p class="blocksatz">In diesem
+                        Betrag ist der Transport, die Unterkunft, die Hallenbenützung, ein
+                        Ausflug sowie die Verpflegung inbegriffen.</p>
+                  </div>
+                </div>
+                
+                <div class="w3-quarter">
+                  <div class="w3-card w3-container" style="min-height:375px">
+                    <h3>Anmeldung</h3><br>
+                    <img src="img/book.png" alt="Buch">
+                    <p>Die Anmeldung erfolgt über die Vereinshomepage des HCWK.</p>
+                    <a href="#anmeldung"><button class="w3-button w3-block w3-white w3-border w3-border-black">Hier Anmelden</button></a>
+                  </div>
+                </div>
+    
+                <div class="w3-quarter">
+                    <div class="w3-card w3-container" style="min-height:375px">
+                        <h3>Rückreise</h3><br>
+                        <img src="img/train.png" alt="Zug">
+                        <p>Samstag, 15. Juli 2023</p>
+                        <p>Ankunft: 18:00 Uhr, Küssnacht Bahnhof</p>
+                    </div>
+                </div>
+                
+                <!-- Accordeon -->
+                <div class="w3-container">
+                    <h3>Lager FAQ</h3>
+                    <button onclick="accordion('kueche')" class="w3-btn w3-block w3-grey w3-left-align">Küche</button>
+                    <div id="kueche" class="w3-container w3-hide">
+                        <p class="blocksatz">Es wird ein 3–5-köpfiges Küchenteam vor Ort sein, welches für das leibliche Wohl der Teilnehmer sorgt. </p>
+                    </div>
+                    <button onclick="accordion('leiterteam')" class="w3-btn w3-block w3-grey w3-left-align">Leiterteam</button>
+                    <div id="leiterteam" class="w3-container w3-hide">
+                        <p class="blocksatz">Wie in den vergangenen Jahren werden Trainer/Innen und Betreuer vor Ort sein.</p>
+                    </div>
+                    <button onclick="accordion('versicherung')" class="w3-btn w3-block w3-grey w3-left-align">Versicherung</button>
+                    <div id="versicherung" class="w3-container w3-hide">
+                        <p class="blocksatz">Die Versicherung ist Sache der TeilnehmerInnen/Eltern</p>
+                    </div>
+                    <button onclick="accordion('spenden')" class="w3-btn w3-block w3-grey w3-left-align">Spenden</button>
+                    <div id="spenden" class="w3-container w3-hide">
+                        <p class="blocksatz">Yanick Wood gibt gerne Auskunft.</p>
+                    </div>
+                </div>
+    
+            </div>
+    
+           
+            <!-- Anmeldung -->
+            <div id="anmeldung" class="w3-row-padding w3-left w3-margin-top">
+                <h1 class="myclass-color">Anmeldung</h1>
+                <div class="w3-panel w3-pale-blue">
+                    <p class="blocksatz">Natels, Tablets und sonstige elektronische Geräte sind nicht erlaubt.</p>
+                    <p class="blocksatz">Persönliche Vereinsbekleidung ist ein gutes Kennzeichnen.</p>
+                </div>
+            </div>
+            <section class="w3-container w3-border-grey">
+                <form class="w3-container myclass-color" method="POST" onsubmit="return isOK()" action="server.php">
+                    <div class="w3-row-padding">
+                        <div id="divvorname" class="w3-half">
+                            <label id="labelvorname" for="vorname">Vorname</label>
+                            <input id="vorname" name="vorname" class="w3-input" type="text">
+                        </div>
+                        <div id="divnachname" class="w3-half">
+                            <label id="labelnachname" for="nachname">Nachname</label>
+                            <input id="nachname" name="nachname" class="w3-input" type="text">
+                        </div>
+                        <div id="divtelefon" class="w3-half">
+                            <label id="labeltelefon" for="telefon">Natel Eletern für Notfälle</label>
+                            <input type="tel" class="w3-input" id="telefon" name="telefon">
+                        </div>
+                        <div id="divmannschaft" class="w3-half">
+                            <label id="labelmannschaft" for="mannschaft">Mannschaft</label>
+                            <select class="w3-select" name="mannschaft" id="mannschaft">
+                                <option value="" disabled selected>Wähle deine aktuelle Juniorenklasse aus</option>
+                                <option value="E-Junioren">E-Junioren</option>
+                                <option value="D-Junioren">D-Junioren</option>
+                                <option value="C-Junioren">C-Junioren</option>
+                                <option value="U16-Junioren">U16-Junioren</option>
+                            </select>
+                        </div>
+                        <div id="divgeburtstag" class="w3-half">
+                            <label id="labelgeburtstag" for="geburtstag">Geburtstag</label><br>
+                            <input type="date" id="geburtstag" name="geburtstag" min="1999-01-01" max="2018-12-12">
+                        </div>
+                        <div id="divemail" class="w3-half">
+                            <label id="labelemail" for="email">E-Mail</label>
+                            <input id="email" name="email" class="w3-input" type="email">
+                        </div>
+                        <div class="w3-row"> 
+                            <label for="bemerkungen">Bemerkungen (Allergene / Medikamente)</label>
+                            <textarea type="text" class="w3-input" id="bemerkungen" name="bemerkungen" rows="4" cols="50"></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <button class="w3-btn w3-grey">Verbindlich Anmelden</button>
+                </form>
+            </section>
+    
+            <!-- Kontakt-->
+            <div class="w3-panel myclass-color">
+                <div class="w3-row-padding w3-left w3-margin-top">
+                    <h3>
+                        Wir freuen uns auf ein erfolgreiches,
+                        lehrreiches und lustiges
+                        Trainingslager 2023! <br> Komm doch auch!
+                    </h3>
+                    <canvas id="floorball" ></canvas>
+                </div>
             </div>
         </div>
-    </div>
-</body>
-
-<footer class="myclass-colorinverse myclass-footer">
-    <h6>© <span id="year"></span> HC Weggis-Küssnacht by Flavio Waser</h6>
-</footer>
-
-<script>
-    // Get actual year
-    document.getElementById("year").innerHTML = new Date().getFullYear();   
-</script>
+    </body>
+    
+    <footer class="myclass-colorinverse myclass-footer">
+        <h6>© <span id="year"></span> HC Weggis-Küssnacht by Flavio Waser</h6>
+    </footer>
+    
+    <script>
+        // Get actual year
+        document.getElementById("year").innerHTML = new Date().getFullYear();   
+    </script>
+</html>
