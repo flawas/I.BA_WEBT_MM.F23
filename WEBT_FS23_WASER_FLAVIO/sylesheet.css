@@ -26,20 +26,20 @@ html {
     margin: 20px 0;
     padding-top: 35px;
     overflow-wrap: break-word;
-    color: wheat
+    color: #a09073
 }
 
 .myclass-color {
-    color: wheat
+    color: #a09073
 }
 
 .myclass-colorinverse {
-    background-color: wheat;
+    background-color: #a09073;
     color: white;
 }
 
 .myclass-backgroundcolor {
-    background-color: wheat;
+    background-color: #a09073;
 }
 
 .myclass-slider {
@@ -78,7 +78,7 @@ h6 {
 }
 
 canvas {
-    background-color: wheat;
+    background-color: #a09073;
     border-radius: 40px;
     border:black 3px solid;
 }
