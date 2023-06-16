@@ -14,4 +14,4 @@ jobs:
         server: ${{ secrets.ftp_server }}
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: /www/www.flawasch.myhostpoint.ch/
+        server-dir: /www/HSLU/I.BA_WEBT_MM.F23
