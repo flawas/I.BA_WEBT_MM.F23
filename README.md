@@ -13,4 +13,4 @@ This repository is a collection of examples and exercises of the module WEBT at 
 
 The actual version of the repository is available to view online. 
 
-[Link to website](https://flawasch.myhostpotin.ch)
+[Link to website](http://i-ba-webt-mm-f23.flaviowaser.ch/)
